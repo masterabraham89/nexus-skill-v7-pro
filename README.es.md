@@ -43,7 +43,7 @@ En lugar de generar código genérico, con NEXUS-PRO Antigravity produce código
 
 ```
 nexus-skill-v7-pro-enterprise/
-└── .agents/skills/nexus-4ever/
+└── .agents/skills/nexus-pro/
     ├── SKILL.md              ← Núcleo del skill (645 líneas de reglas enterprise)
     ├── MANIFEST.md           ← Índice de todos los archivos
     ├── CHANGELOG.md          ← Historial de versiones
@@ -169,15 +169,17 @@ Necesito crear un endpoint para [tu tarea].
 
 ## Reglas de oro que aplica este skill
 
-- **Controllers no tocan la base de datos** — delegan a Services y Repositories
+- **Evidence-Based Debugging** — Cero parcheo ciego. Los errores se triangulan y verifican con pruebas reales antes de escribir código.
+- **Anti-Patch Policy (Refactor-First)** — Límites estrictos de tamaño. El código spaghetti está prohibido y fuerza una refactorización hacia Servicios/Hooks.
+- **Controllers no tocan la base de datos** — delegan a Services y Repositories. Máximo 3 dependencias.
+- **Services son stateless** — y completamente aislados de la petición HTTP.
 - **companyId nunca viene del cliente** — siempre desde el token autenticado
 - **Ownership siempre validado** — empresa A no puede ver datos de empresa B
 - **Upserts en chunks de 200** — nunca operaciones masivas sin chunking
-- **useEffect siempre con cleanup** — sin memory leaks en React
+- **useEffect siempre con cleanup** — sin memory leaks en React. Máximo 2 efectos por componente.
 - **No `any` sin justificación** — TypeScript estricto
 - **Transacciones con rollback** — consistencia en operaciones críticas
 - **Logs seguros** — nunca tokens, passwords o datos bancarios en logs
-- **Archivos con responsabilidad única** — sin archivos de 1000 líneas
 - **Sync idempotente** — se puede ejecutar dos veces sin duplicar datos
 
 ---
@@ -203,11 +205,11 @@ Necesito crear un endpoint para [tu tarea].
 
 | Versión | Highlights |
 |---------|-----------|
-| **v7.0-pro-enterprise** | Plan Before Code, Tenant Isolation, Feature Flags, Idempotency, Export Safety, Audit Trail, Definition of Done |
+| **v7.0-pro-enterprise** | God Mode Debugging, Anti-Patch Policy, Plan Before Code, Tenant Isolation, Feature Flags, Idempotency, Export Safety, Definition of Done |
 | **v6.0-enterprise** | DDD-lite, Migration Safety, OpenAPI, Event-Driven, Observability Engineering, Production Gates |
 | **v5.0-ultimate** | Base enterprise: Laravel/React/PostgreSQL, seguridad, CI/CD, testing, PWA |
 
-Ver [CHANGELOG.md](./.agents/skills/nexus-4ever/CHANGELOG.md) para el historial completo.
+Ver [CHANGELOG.md](./.agents/skills/nexus-pro/CHANGELOG.md) para el historial completo.
 
 ---
 

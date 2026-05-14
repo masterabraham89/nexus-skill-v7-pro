@@ -51,7 +51,7 @@ nexus-skill-v7-pro-enterprise/
 ├── README.md                         ← You are here
 ├── README.es.md                      ← Spanish version
 ├── CONTRIBUTING.md                   ← Contribution guide
-└── .agents/skills/nexus-4ever/
+└── .agents/skills/nexus-pro/
     ├── SKILL.md                      ← Skill core (700+ lines of enterprise rules)
     ├── MANIFEST.md                   ← Full file index
     ├── CHANGELOG.md                  ← Version history
@@ -248,15 +248,17 @@ I need to create an endpoint for [your task].
 
 ## Golden Rules This Skill Enforces
 
-- **Controllers never touch the database** — they delegate to Services and Repositories
+- **Evidence-Based Debugging** — No blind patching. Errors are strictly triangulated and verified before writing code.
+- **Anti-Patch Policy (Refactor-First)** — Strict file size limits. Spaghetti code is prohibited and forces a refactor to Services/Hooks.
+- **Controllers never touch the database** — they delegate to Services and Repositories. Max 3 dependencies allowed.
+- **Services are stateless** — and completely isolated from the HTTP Request.
 - **companyId never comes from the client** — always extracted from the authenticated token
 - **Ownership always validated** — Company A cannot access Company B's data
 - **Upserts in chunks of 200** — no bulk operations without chunking
-- **useEffect always with cleanup** — no memory leaks in React
+- **useEffect always with cleanup** — no memory leaks in React. Max 2 effects per component.
 - **No `any` without justification** — strict TypeScript
 - **Transactions with rollback** — consistency in critical operations
 - **Safe logs** — never tokens, passwords, or financial data in logs
-- **Single responsibility per file** — no 1000-line files
 - **Idempotent sync** — can run twice without duplicating data
 
 ---
@@ -285,11 +287,11 @@ I need to create an endpoint for [your task].
 
 | Version | Highlights |
 |---------|-----------|
-| **v7.0-pro-enterprise** | Plan Before Code · Tenant Isolation Testing · Feature Flags · Idempotency · Export Safety · Audit Trail · Definition of Done · Bilingual support |
+| **v7.0-pro-enterprise** | God Mode Debugging · Anti-Patch Policy · Plan Before Code · Tenant Isolation Testing · Feature Flags · Idempotency · Export Safety · Definition of Done · Bilingual support |
 | **v6.0-enterprise** | DDD-lite · Migration Safety · OpenAPI · Event-Driven · Observability Engineering · Production Gates |
 | **v5.0-ultimate** | Base enterprise: Laravel/React/PostgreSQL · Security · CI/CD · Testing · PWA |
 
-See [CHANGELOG.md](./.agents/skills/nexus-4ever/CHANGELOG.md) for the full history.
+See [CHANGELOG.md](./.agents/skills/nexus-pro/CHANGELOG.md) for the full history.
 
 ---
 
