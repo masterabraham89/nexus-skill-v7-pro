@@ -265,6 +265,10 @@ I need to create an endpoint for [your task].
 - **Active Security** — all public endpoints must have rate limiting to prevent DDoS
 - **Conventional Commits** — git history must be perfectly structured (`feat:`, `fix:`)
 - **No-Delegation Policy** — AI must run terminal commands/deployments itself via local `nexus-workflow.md` rules
+- **Zero-Trust Secrets** — AI is strictly forbidden from hardcoding API keys/tokens in the source code; `.env` is mandatory
+- **Anti-N+1 & Payload Strictness** — `SELECT *` is forbidden; forced eager-loading and explicit DTO/select queries
+- **Autonomous ADRs** — AI automatically generates Architecture Decision Records (`docs/architecture`) for structural changes
+- **Self-Healing Pre-Commits** — AI must run tests/lints in terminal and self-correct errors before marking tasks as complete
 
 ---
 

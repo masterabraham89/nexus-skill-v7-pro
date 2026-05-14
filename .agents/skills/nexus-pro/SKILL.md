@@ -645,6 +645,10 @@ Consultar estos archivos según el tipo de cambio:
 - `active-security.md` para prevención DDoS, rate limiting y ataques de fuerza bruta.
 - `conventional-commits.md` para asegurar un historial de Git ordenado y estándar.
 - `task-handoff-protocol.md` para asegurar ejecución automatizada de despliegues (No-Delegation Policy) y leer reglas dinámicas locales.
+- `enterprise-security.md` para obligar resiliencia (Circuit Breakers) y evitar hardcoding de secretos (Zero-Trust).
+- `enterprise-performance.md` para prohibir "SELECT *" masivos, obligar paginación y prevenir N+1.
+- `autonomous-documentation.md` para autogenerar ADRs en cambios arquitectónicos.
+- `self-healing-audits.md` para correr tests/linting en terminal antes de dar por terminada la tarea.
 - `plan-before-code.md` para planificar antes de modificar.
 - `scope-control.md` para evitar cambios fuera de alcance.
 - `tenant-isolation.md` para aislamiento multiempresa.

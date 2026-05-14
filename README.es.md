@@ -186,6 +186,10 @@ Necesito crear un endpoint para [tu tarea].
 - **Seguridad Activa** — todo endpoint público debe tener rate limiting para prevenir DDoS
 - **Conventional Commits** — historial de git estructurado obligatoriamente (`feat:`, `fix:`)
 - **No-Delegation Policy** — La IA tiene prohibido delegar comandos, debe autoejecutarlos según el `nexus-workflow.md` local
+- **Zero-Trust Secrets** — La IA tiene prohibido quemar claves o tokens en código; uso de `.env` y `.env.example` obligatorio
+- **Anti-N+1 & Payload Strictness** — Prohibido `SELECT *`; Eager Loading y paginación obligatorios
+- **ADRs Autónomos** — La IA autogenera *Architecture Decision Records* (`docs/architecture/`) ante cambios estructurales
+- **Self-Healing Pre-Commits** — La IA ejecuta auto-escaneos en consola (linting/testing) y se autocorrige antes de terminar
 
 ---
 

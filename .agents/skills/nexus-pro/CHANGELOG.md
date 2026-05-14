@@ -11,6 +11,10 @@ Actualización crítica de directivas de IA:
 - **Escalabilidad de DB & Índices:** Prevención de *Full Table Scans* y obligatoriedad de índices en migraciones para columnas relacionales y frecuentes.
 - **Seguridad Activa (Rate Limiting):** Todo endpoint crítico debe tener Throttling para prevenir ataques de fuerza bruta, DDoS y *cloud billing attacks*.
 - **Task Handoff Protocol (No-Delegation Policy):** La IA tiene prohibido delegar comandos (migraciones, despliegues). Se introduce un "Motor de Flujos Dinámicos" que obliga a leer reglas de despliegue desde un `nexus-workflow.md` local para adaptarse a cualquier proyecto y erradicar la amnesia de contexto.
+- **Enterprise Security (Zero-Trust & Fallbacks):** Bloqueo a credenciales hardcodeadas (usa .env obligatoriamente) e implementación de Graceful Degradation / Circuit Breakers para APIs de terceros.
+- **Enterprise Performance (Payload Strictness):** Prohibición total de llamadas "SELECT *". Paginación obligatoria y Eager Loading estricto (Anti-N+1).
+- **Autonomous Documentation (ADRs):** Autogeneración de *Architecture Decision Records* en `docs/architecture/` al agregar integraciones o cambiar esquemas pesados.
+- **Self-Healing Audits (Pre-Commits de IA):** Obligación de ejecutar auto-escaneos (`npm run lint`, `php artisan test`) en consola y corregirse sola antes de declarar finalizada la tarea.
 - **Estandarización de Git (Conventional Commits):** Los commits de la IA deben ser legibles, atómicos y cumplir con la semántica internacional.
 - Eliminación global y estricta de términos de proyectos privados, estableciendo formalmente la marca blanca genérica **NEXUS-PRO**.
 
