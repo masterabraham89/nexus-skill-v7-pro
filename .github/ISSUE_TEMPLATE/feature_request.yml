@@ -1,0 +1,57 @@
+name: 💡 Feature Request / New Reference
+description: Propose a new technical reference, prompt, template, or rule.
+title: "[FEATURE] "
+labels: ["enhancement", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        NEXUS-PRO grows through community contributions. Propose what you'd like to see added.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of addition
+      options:
+        - New reference document (references/)
+        - New ready-to-use prompt (examples/)
+        - New code template (templates/)
+        - New trigger keyword
+        - New golden rule
+        - New stack support
+        - Other improvement
+    validations:
+      required: true
+
+  - type: input
+    id: filename
+    attributes:
+      label: Proposed filename
+      placeholder: "references/graphql.md"
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why is this needed?
+      description: What problem does it solve? What scenario does it cover?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed content (optional)
+      description: Paste a draft of the new document or rule if you have one.
+      render: markdown
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: This is generic (not specific to a single project)
+          required: true
+        - label: This follows the existing file format
+          required: false
+        - label: I'm willing to submit a PR with this content
+          required: false

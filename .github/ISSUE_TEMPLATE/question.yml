@@ -1,0 +1,31 @@
+name: ❓ Question / Help
+description: Ask about how to use NEXUS-PRO or activate it in your project.
+title: "[QUESTION] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before asking, please check the [README](../../README.md) and [CONTRIBUTING](../../CONTRIBUTING.md) guides.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: Be as specific as possible.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - Installation
+        - Activation / triggers
+        - Backend rules
+        - Frontend rules
+        - Security
+        - Templates / examples
+        - Contributing
+        - Other

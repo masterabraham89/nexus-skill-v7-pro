@@ -1,0 +1,48 @@
+name: 🐛 Bug Report / Incorrect Rule
+description: Report a rule that generates wrong, insecure, or suboptimal code.
+title: "[BUG] "
+labels: ["bug", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve NEXUS-PRO. Please describe the issue clearly so we can fix it.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected Area
+      options:
+        - Backend (Laravel / PHP)
+        - Frontend (React / TypeScript)
+        - Database (PostgreSQL)
+        - Security rules
+        - Architecture rules
+        - Templates
+        - Examples / Prompts
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What's wrong?
+      description: Describe the incorrect rule, template, or example.
+      placeholder: "The rule in references/backend.md says X, but it generates code that does Y which causes Z..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should it do instead?
+      description: Describe the correct behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context (optional)
+      description: Stack version, Antigravity version, or any additional context.
