@@ -264,6 +264,7 @@ I need to create an endpoint for [your task].
 - **Database Indexing** — no foreign keys or search fields without `$table->index()`
 - **Active Security** — all public endpoints must have rate limiting to prevent DDoS
 - **Conventional Commits** — git history must be perfectly structured (`feat:`, `fix:`)
+- **No-Delegation Policy** — AI must run terminal commands/deployments itself via local `nexus-workflow.md` rules
 
 ---
 

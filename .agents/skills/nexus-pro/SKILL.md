@@ -644,6 +644,7 @@ Consultar estos archivos según el tipo de cambio:
 - `database-indexing.md` para asegurar índices en migraciones y evitar full table scans.
 - `active-security.md` para prevención DDoS, rate limiting y ataques de fuerza bruta.
 - `conventional-commits.md` para asegurar un historial de Git ordenado y estándar.
+- `task-handoff-protocol.md` para asegurar ejecución automatizada de despliegues (No-Delegation Policy) y leer reglas dinámicas locales.
 - `plan-before-code.md` para planificar antes de modificar.
 - `scope-control.md` para evitar cambios fuera de alcance.
 - `tenant-isolation.md` para aislamiento multiempresa.

@@ -10,6 +10,7 @@ Actualización crítica de directivas de IA:
 - **TDD Strict Mode:** Obligación de crear pruebas automáticas (Test-First) antes de implementar funciones críticas de backend o frontend.
 - **Escalabilidad de DB & Índices:** Prevención de *Full Table Scans* y obligatoriedad de índices en migraciones para columnas relacionales y frecuentes.
 - **Seguridad Activa (Rate Limiting):** Todo endpoint crítico debe tener Throttling para prevenir ataques de fuerza bruta, DDoS y *cloud billing attacks*.
+- **Task Handoff Protocol (No-Delegation Policy):** La IA tiene prohibido delegar comandos (migraciones, despliegues). Se introduce un "Motor de Flujos Dinámicos" que obliga a leer reglas de despliegue desde un `nexus-workflow.md` local para adaptarse a cualquier proyecto y erradicar la amnesia de contexto.
 - **Estandarización de Git (Conventional Commits):** Los commits de la IA deben ser legibles, atómicos y cumplir con la semántica internacional.
 - Eliminación global y estricta de términos de proyectos privados, estableciendo formalmente la marca blanca genérica **NEXUS-PRO**.
 

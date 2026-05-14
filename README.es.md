@@ -185,6 +185,7 @@ Necesito crear un endpoint para [tu tarea].
 - **Database Indexing** — prohibidas claves foráneas sin `$table->index()`
 - **Seguridad Activa** — todo endpoint público debe tener rate limiting para prevenir DDoS
 - **Conventional Commits** — historial de git estructurado obligatoriamente (`feat:`, `fix:`)
+- **No-Delegation Policy** — La IA tiene prohibido delegar comandos, debe autoejecutarlos según el `nexus-workflow.md` local
 
 ---
 
