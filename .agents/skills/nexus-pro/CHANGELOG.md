@@ -1,5 +1,15 @@
 # Changelog — NEXUS-PRO (nexus-skill-v7-pro-enterprise)
 
+## 7.1-diagnostics-sre (Modo Diagnóstico Inteligente)
+
+Nueva capacidad SRE para análisis de incidentes:
+
+- **Root Cause Analysis (RCA):** Nuevo protocolo (5 Whys) para diagnosticar estructuralmente incidentes complejos antes de proponer parches rápidos (`diagnostics-rca.md`).
+- **Análisis de Logs & Stack Traces:** Reglas explícitas para interpretar errores de backend (Laravel) y frontend (React), ignorando el ruido del framework y ubicando el fallo exacto en el *User-Land Code* (`log-trace-analysis.md`).
+- **Clasificación de Incidentes:** Matriz de triage (P1 a P4) para responder adecuadamente según la severidad (ej. modo de emergencia para caídas de base de datos) (`incident-classification.md`).
+- **Visual Debugging:** Protocolo de análisis multimodal para inspeccionar capturas de pantalla de la UI rota, consolas del navegador y terminales (`visual-debugging.md`).
+- **Nuevos Prompts:** `incident-triage-prompt.md` y `visual-bug-prompt.md` para iniciar rápidamente investigaciones forenses de código.
+
 ## 7.0-pro-enterprise (God Mode / Architecture Enforcer)
 
 Actualización crítica de directivas de IA:

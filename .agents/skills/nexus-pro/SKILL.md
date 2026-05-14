@@ -71,6 +71,9 @@ triggers:
   - "subir archivos"
   - "crear endpoint idempotente"
   - "preparar release"
+  - "diagnosticar error"
+  - "analizar log"
+  - "revisar incidente"
   # — English —
   - "create endpoint"
   - "refactor backend"
@@ -95,6 +98,9 @@ triggers:
   - "production release"
   - "code review"
   - "architecture review"
+  - "diagnose error"
+  - "root cause analysis"
+  - "analyze log"
 ---
 
 # NEXUS-PRO
@@ -669,6 +675,17 @@ Consultar estos archivos según el tipo de cambio:
 - `ux-failure-states.md` para estados UI avanzados.
 - `business-rules-registry.md` para reglas globales.
 - `definition-of-done.md` para cierre de tareas.
+- `diagnostics-rca.md` para la metodología Root Cause Analysis y 5 Whys.
+- `log-trace-analysis.md` para leer e interpretar stack traces y errores.
+- `incident-classification.md` para categorizar severidad de incidentes (P1 a P4).
+- `visual-debugging.md` para inspección visual de UI y consolas de navegador.
+
+### 🩺 [CORE: INCIDENT RESPONSE & DIAGNOSTICS]
+Si el usuario envía un error, un log, un stack trace o una captura de pantalla de un bug, la IA DEBE DETENERSE y entrar en **Modo Diagnóstico (SRE)**. 
+1. **Contención:** Evaluar severidad (P1-P4). Si es P1, sugerir contención inmediata (rollback/hotfix).
+2. **Análisis:** Extraer la línea del código de usuario afectada ignorando el ruido del framework.
+3. **Causa Raíz:** Aplicar la metodología de los 5 Porqués. Prohibido sugerir parches o escribir código sin estar de acuerdo en la causa raíz estructural.
+4. **Validación:** Si falta información, pedir la ruta exacta o la traza de red. **Prohibido adivinar código.**
 
 ### Anti-Patch Policy (Refactor-First)
 Antigravity tiene ESTRICTAMENTE PROHIBIDO parchar archivos gigantes. Si un archivo supera el límite de líneas o acumula múltiples responsabilidades, la IA DEBE extraer la lógica a un Servicio o Custom Hook ANTES de añadir nueva funcionalidad.

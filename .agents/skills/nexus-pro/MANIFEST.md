@@ -16,12 +16,14 @@ Skill enterprise para Antigravity orientado al desarrollo full stack profesional
 - `examples/export-feature-prompt.md`
 - `examples/file-upload-feature-prompt.md`
 - `examples/idempotent-endpoint-prompt.md`
+- `examples/incident-triage-prompt.md`
 - `examples/migration-safe-prompt.md`
 - `examples/new-feature-prompt.md`
 - `examples/production-release-prompt.md`
 - `examples/refactor-prompt.md`
 - `examples/security-review-prompt.md`
 - `examples/tenant-isolation-review-prompt.md`
+- `examples/visual-bug-prompt.md`
 - `references/accessibility.md`
 - `references/ai-coding-constraints.md`
 - `references/anti-hallucination.md`
@@ -42,6 +44,7 @@ Skill enterprise para Antigravity orientado al desarrollo full stack profesional
 - `references/deletion-policy.md`
 - `references/dependency-governance.md`
 - `references/design-system.md`
+- `references/diagnostics-rca.md`
 - `references/disaster-recovery.md`
 - `references/documentation.md`
 - `references/environment-parity.md`
@@ -54,11 +57,13 @@ Skill enterprise para Antigravity orientado al desarrollo full stack profesional
 - `references/frontend.md`
 - `references/git-strategy.md`
 - `references/idempotency.md`
+- `references/incident-classification.md`
 - `references/infrastructure.md`
 - `references/internationalization.md`
 - `references/migration-safety.md`
 - `references/mobile-pwa.md`
 - `references/monitoring.md`
+- `references/log-trace-analysis.md`
 - `references/observability-engineering.md`
 - `references/openapi.md`
 - `references/performance.md`
@@ -72,6 +77,7 @@ Skill enterprise para Antigravity orientado al desarrollo full stack profesional
 - `references/tenant-isolation.md`
 - `references/testing.md`
 - `references/ux-failure-states.md`
+- `references/visual-debugging.md`
 - `templates/api-endpoint-template.md`
 - `templates/architecture-review-report.md`
 - `templates/audit-event-template.md`
