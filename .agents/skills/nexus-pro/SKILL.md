@@ -640,6 +640,10 @@ Consultar estos archivos según el tipo de cambio:
 - `anti-patch-policy.md` para evitar deuda técnica, forzar refactorización y respetar hard limits.
 - `evidence-based-debugging.md` para diagnóstico eficiente sin asunciones ni bucles infinitos.
 - `best-practices-bible.md` para reglas estrictas según el tipo de archivo (Controllers, Services, React).
+- `tdd-strict-mode.md` para obligar Test-Driven Development en funciones críticas.
+- `database-indexing.md` para asegurar índices en migraciones y evitar full table scans.
+- `active-security.md` para prevención DDoS, rate limiting y ataques de fuerza bruta.
+- `conventional-commits.md` para asegurar un historial de Git ordenado y estándar.
 - `plan-before-code.md` para planificar antes de modificar.
 - `scope-control.md` para evitar cambios fuera de alcance.
 - `tenant-isolation.md` para aislamiento multiempresa.

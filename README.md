@@ -260,6 +260,10 @@ I need to create an endpoint for [your task].
 - **Transactions with rollback** — consistency in critical operations
 - **Safe logs** — never tokens, passwords, or financial data in logs
 - **Idempotent sync** — can run twice without duplicating data
+- **TDD Strict Mode** — write the test before writing critical logic
+- **Database Indexing** — no foreign keys or search fields without `$table->index()`
+- **Active Security** — all public endpoints must have rate limiting to prevent DDoS
+- **Conventional Commits** — git history must be perfectly structured (`feat:`, `fix:`)
 
 ---
 

@@ -181,6 +181,10 @@ Necesito crear un endpoint para [tu tarea].
 - **Transacciones con rollback** — consistencia en operaciones críticas
 - **Logs seguros** — nunca tokens, passwords o datos bancarios en logs
 - **Sync idempotente** — se puede ejecutar dos veces sin duplicar datos
+- **TDD Strict Mode** — escribe la prueba antes de escribir lógica crítica
+- **Database Indexing** — prohibidas claves foráneas sin `$table->index()`
+- **Seguridad Activa** — todo endpoint público debe tener rate limiting para prevenir DDoS
+- **Conventional Commits** — historial de git estructurado obligatoriamente (`feat:`, `fix:`)
 
 ---
 

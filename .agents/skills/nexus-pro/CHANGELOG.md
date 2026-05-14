@@ -7,6 +7,10 @@ Actualización crítica de directivas de IA:
 - **Anti-Patch Policy (Refactor-First):** Prohibido el parcheo ciego. Si el archivo supera el límite de tamaño, Antigravity DEBE refactorizar creando Servicios o Custom Hooks.
 - **Evidence-Based Debugging:** Protocolo de triangulación de errores obligatorio. La IA debe verificar la existencia de variables/tablas (`view_file` o `grep`) antes de codificar soluciones y tiene un límite de 3 búsquedas para evitar bucles infinitos.
 - **La Biblia de Buenas Prácticas:** Reglas estrictas aplicadas al tipo de archivo (Controllers sin dependencias masivas, Services stateless, Repositorios con eager loading, React Dumb Components).
+- **TDD Strict Mode:** Obligación de crear pruebas automáticas (Test-First) antes de implementar funciones críticas de backend o frontend.
+- **Escalabilidad de DB & Índices:** Prevención de *Full Table Scans* y obligatoriedad de índices en migraciones para columnas relacionales y frecuentes.
+- **Seguridad Activa (Rate Limiting):** Todo endpoint crítico debe tener Throttling para prevenir ataques de fuerza bruta, DDoS y *cloud billing attacks*.
+- **Estandarización de Git (Conventional Commits):** Los commits de la IA deben ser legibles, atómicos y cumplir con la semántica internacional.
 - Eliminación global y estricta de términos de proyectos privados, estableciendo formalmente la marca blanca genérica **NEXUS-PRO**.
 
 ## 7.0-pro-enterprise (license — improvement #4)
