@@ -1,5 +1,14 @@
 # Changelog — NEXUS-PRO (nexus-skill-v7-pro-enterprise)
 
+## 7.2-bug-resolution-engine (Motor Autónomo de Resolución SRE)
+
+Conversión de la IA de un simple "reportador de bugs" a un **Ingeniero SRE Autónomo**:
+
+- **Bug Resolution Engine (BRE):** Sistema de 5 fases (Triage, Protocolo por Nivel, Ciclo Universal, Guías de Solución y Checklist de Cierre) para diagnosticar y resolver errores de forma estructurada (`bug-resolution-engine.md`).
+- **Protocolos de Severidad (P1-P4):** Playbooks de respuesta adaptados al tipo de fallo (desde Modo Emergencia con Hotfix hasta Triangulación de 3 Capas).
+- **The 5 Whys (Causa Raíz):** Obligación algorítmica de documentar 3 a 5 niveles lógicos de diagnóstico antes de proponer código, atacando la causa estructural y no el síntoma.
+- **Definition of Done (DoD) para Bugs:** 17 puntos de validación (arquitectura, testing, seguridad y documentación) que la IA debe completar para dar un fallo por cerrado.
+
 ## 7.1-diagnostics-sre (Modo Diagnóstico Inteligente)
 
 Nueva capacidad SRE para análisis de incidentes:

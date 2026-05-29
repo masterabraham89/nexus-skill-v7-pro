@@ -74,6 +74,27 @@ triggers:
   - "diagnosticar error"
   - "analizar log"
   - "revisar incidente"
+  - "investigar error en internet"
+  - "analisis de impacto"
+  - "generar adr"
+  - "actualizar memoria de proyecto"
+  # — BRE (Bug Resolution Engine) — Español —
+  - "hay un bug"
+  - "hay un error"
+  - "no funciona"
+  - "se rompe"
+  - "no guarda"
+  - "no carga"
+  - "resolver bug"
+  - "corregir error"
+  - "clasificar error"
+  - "bug crítico"
+  - "falla en producción"
+  - "reportar bug"
+  - "error de seguridad"
+  - "problema de rendimiento"
+  - "error visual"
+  - "no se ve bien"
   # — English —
   - "create endpoint"
   - "refactor backend"
@@ -101,6 +122,23 @@ triggers:
   - "diagnose error"
   - "root cause analysis"
   - "analyze log"
+  - "search internet for solution"
+  - "blast radius analysis"
+  - "generate adr"
+  - "update project memory"
+  # — BRE (Bug Resolution Engine) — English —
+  - "there is a bug"
+  - "bug report"
+  - "not working"
+  - "broken"
+  - "fix bug"
+  - "resolve error"
+  - "classify bug"
+  - "critical bug"
+  - "production failure"
+  - "security vulnerability"
+  - "performance issue"
+  - "visual bug"
 ---
 
 # NEXUS-PRO
@@ -643,6 +681,7 @@ Una tarea solo está terminada si compila, respeta arquitectura, valida segurida
 
 Consultar estos archivos según el tipo de cambio:
 
+- `bug-resolution-engine.md` **[NUEVO — PRIORITARIO]** para clasificar, diagnosticar y resolver cualquier bug reportado de forma autónoma y estructurada. Es el motor principal de respuesta a incidentes. Contiene protocolos P1–P4, el ciclo de 5 pasos, guías de solución por tipo de error y el checklist de cierre.
 - `anti-patch-policy.md` para evitar deuda técnica, forzar refactorización y respetar hard limits.
 - `evidence-based-debugging.md` para diagnóstico eficiente sin asunciones ni bucles infinitos.
 - `best-practices-bible.md` para reglas estrictas según el tipo de archivo (Controllers, Services, React).
@@ -679,13 +718,41 @@ Consultar estos archivos según el tipo de cambio:
 - `log-trace-analysis.md` para leer e interpretar stack traces y errores.
 - `incident-classification.md` para categorizar severidad de incidentes (P1 a P4).
 - `visual-debugging.md` para inspección visual de UI y consolas de navegador.
+- `internet-research-diagnostics.md` para investigar errores complejos usando búsqueda web antes de codificar.
+- `self-healing-tests.md` para aplicar "Test-Driven Repair" al corregir bugs.
+- `blast-radius-analysis.md` para evaluar impacto (`grep_search`) antes de modificar código core.
+- `autonomous-adrs.md` para generar documentación arquitectónica (ADR) de manera autónoma.
+- `contextual-memory.md` para usar `.nexus-memory.md` y aprender de las correcciones del proyecto.
+- `devsecops-gate.md` para forzar chequeos de IDOR, N+1 y complejidad algorítmica antes de entregar código.
 
-### 🩺 [CORE: INCIDENT RESPONSE & DIAGNOSTICS]
-Si el usuario envía un error, un log, un stack trace o una captura de pantalla de un bug, la IA DEBE DETENERSE y entrar en **Modo Diagnóstico (SRE)**. 
-1. **Contención:** Evaluar severidad (P1-P4). Si es P1, sugerir contención inmediata (rollback/hotfix).
-2. **Análisis:** Extraer la línea del código de usuario afectada ignorando el ruido del framework.
-3. **Causa Raíz:** Aplicar la metodología de los 5 Porqués. Prohibido sugerir parches o escribir código sin estar de acuerdo en la causa raíz estructural.
-4. **Validación:** Si falta información, pedir la ruta exacta o la traza de red. **Prohibido adivinar código.**
+### 🚀 [CORE: AUTONOMÍA ÉLITE (SRE, SecOps & Context)]
+**1. Contextual Memory:** Al iniciar cualquier interacción, Antigravity DEBE revisar si existe `.nexus-memory.md` y acatar sus reglas personalizadas. Si el usuario corrige un patrón, el agente debe actualizar la memoria.
+**2. Blast Radius Analysis:** Antes de modificar clases core o funciones compartidas, DEBE usar `grep_search` para evaluar qué otros módulos se romperán y arreglarlos en la misma tarea.
+**3. Autonomous ADRs:** Al introducir un patrón, módulo grande o librería, DEBE generar un ADR (Architecture Decision Record) en `docs/architecture/decisions/`.
+**4. Self-Healing Tests:** Al arreglar un bug, intentar crear un test que lo reproduzca, demostrar que falla, aplicar el parche y asegurar que pasa.
+**5. DevSecOps Gate:** Barrera invisible. Todo código entregado pasa primero por un escaneo mental de vulnerabilidades (IDOR, Mass Assignment, N+1, Big O) y se auto-optimiza.
+
+### 🩺 [CORE: BUG RESOLUTION ENGINE (BRE) — INCIDENT RESPONSE & DIAGNOSTICS]
+
+Si el usuario envía un error, un log, un stack trace, una captura de pantalla de un bug o cualquier descripción de comportamiento inesperado, la IA **DEBE DETENER cualquier tarea en curso** y activar el **Bug Resolution Engine** definido en `references/bug-resolution-engine.md`.
+
+El BRE tiene 5 fases que la IA debe ejecutar en orden:
+
+**FASE 1 — TRIAGE:** Clasificar el bug en uno de los 7 niveles (Crítico, Mayor, Menor, Cosmético, Rendimiento, Seguridad, Compatibilidad) y asignar el P-Level correspondiente (P1–P4) usando la tabla cruzada del BRE. Responder internamente las 4 preguntas de triage obligatorias antes de escribir cualquier respuesta al usuario.
+
+**FASE 2 — PROTOCOLO POR NIVEL:**
+- **P1 (Crítico/Seguridad):** MODO EMERGENCIA. Sin charla. Contención primero (rollback/feature flag OFF). Hotfix quirúrgico. Post-mortem. ADR obligatorio.
+- **P2 (Mayor/Rendimiento grave):** Triangulación de 3 capas (Frontend payload → FormRequest/Service → DB/Migración). Generar 3 hipótesis clasificadas. Solución estructural con idempotencia si aplica.
+- **P3 (Menor/Compatibilidad):** Aislamiento del componente. Corrección mínima. Verificar estados UI.
+- **P4 (Cosmético):** Respetar Design System. Verificar multi-resolución. Sin deuda CSS nueva.
+
+**FASE 3 — CICLO UNIVERSAL (5 Pasos):** REPRODUCIR → AISLAR (máx. 3 lecturas de archivo) → DIAGNOSTICAR (5 Porqués) → RESOLVER (causa raíz, no síntoma) → VERIFICAR + BLINDAR (Test-Driven Repair).
+
+**FASE 4 — GUÍAS DE SOLUCIÓN:** Consultar las tablas de solución por tipo de bug en `bug-resolution-engine.md` para encontrar la solución estructural correcta para el síntoma detectado. Prohibido proponer soluciones que no ataquen la causa raíz identificada.
+
+**FASE 5 — CHECKLIST DE CIERRE:** El bug no está resuelto hasta que se completen todos los ítems del checklist de cierre del BRE: diagnóstico documentado, arquitectura respetada, test de regresión escrito, blast radius revisado, commit con Conventional Commits.
+
+> **Regla de No Adivinanza del BRE:** Si tras el triage falta evidencia crítica (log de error, código del Controller/Service o payload de red), Antigravity debe detenerse y pedirle al usuario exactamente qué información se necesita. **Prohibido escribir código sin haber identificado la causa raíz estructural.**
 
 ### Anti-Patch Policy (Refactor-First)
 Antigravity tiene ESTRICTAMENTE PROHIBIDO parchar archivos gigantes. Si un archivo supera el límite de líneas o acumula múltiples responsabilidades, la IA DEBE extraer la lógica a un Servicio o Custom Hook ANTES de añadir nueva funcionalidad.
@@ -719,6 +786,7 @@ Esta versión incorpora un sistema operativo de ingeniería para agentes de desa
 
 Antes de implementar, clasificar el cambio:
 
+- **Bug o error reportado (CUALQUIER TIPO):** leer `bug-resolution-engine.md` PRIMERO. Clasificar nivel (1–7) y P-Level (P1–P4), ejecutar las 5 fases del BRE. No escribir código hasta identificar la causa raíz.
 - **Auth / permisos / usuarios:** leer `security.md`, `backend.md`, `data-privacy.md`, `production-readiness-gates.md`.
 - **Sync / import / upsert:** leer `backend.md`, `database.md`, `performance.md`, `event-driven.md`, `production-readiness-gates.md`.
 - **Migraciones / cambios DB:** leer `database.md`, `migration-safety.md`, `disaster-recovery.md`.
