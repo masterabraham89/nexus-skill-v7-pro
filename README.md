@@ -296,6 +296,8 @@ I need to create an endpoint for [your task].
 
 | Version | Highlights |
 |---------|-----------|
+| **v7.2-bug-resolution-engine** | Autonomous Bug Resolution Engine (BRE) · 5-Phase Triage & Root Cause Analysis (5 Whys) · Test-Driven Repair · P1-P4 Severity Protocols · SRE Mode |
+| **v7.1-diagnostics-sre** | Visual Debugging · RCA Protocol · Intelligent Log Analysis |
 | **v7.0-pro-enterprise** | God Mode Debugging · Anti-Patch Policy · Plan Before Code · Tenant Isolation Testing · Feature Flags · Idempotency · Export Safety · Definition of Done · Bilingual support |
 | **v6.0-enterprise** | DDD-lite · Migration Safety · OpenAPI · Event-Driven · Observability Engineering · Production Gates |
 | **v5.0-ultimate** | Base enterprise: Laravel/React/PostgreSQL · Security · CI/CD · Testing · PWA |

@@ -214,6 +214,8 @@ Necesito crear un endpoint para [tu tarea].
 
 | Versión | Highlights |
 |---------|-----------|
+| **v7.2-bug-resolution-engine** | Motor Autónomo de Resolución de Bugs (BRE) · Triage en 5 Fases & Root Cause Analysis (5 Porqués) · Test-Driven Repair · Protocolos de Severidad P1-P4 · Modo SRE |
+| **v7.1-diagnostics-sre** | Debugging Visual · Protocolo RCA · Análisis Inteligente de Logs |
 | **v7.0-pro-enterprise** | God Mode Debugging, Anti-Patch Policy, Plan Before Code, Tenant Isolation, Feature Flags, Idempotency, Export Safety, Definition of Done |
 | **v6.0-enterprise** | DDD-lite, Migration Safety, OpenAPI, Event-Driven, Observability Engineering, Production Gates |
 | **v5.0-ultimate** | Base enterprise: Laravel/React/PostgreSQL, seguridad, CI/CD, testing, PWA |
