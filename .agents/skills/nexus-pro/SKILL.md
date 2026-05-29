@@ -78,6 +78,8 @@ triggers:
   - "analisis de impacto"
   - "generar adr"
   - "actualizar memoria de proyecto"
+  - "optimizar tokens"
+  - "/nexus-save"
   # — BRE (Bug Resolution Engine) — Español —
   - "hay un bug"
   - "hay un error"
@@ -126,6 +128,8 @@ triggers:
   - "blast radius analysis"
   - "generate adr"
   - "update project memory"
+  - "optimize tokens"
+  - "/nexus-save"
   # — BRE (Bug Resolution Engine) — English —
   - "there is a bug"
   - "bug report"
@@ -724,13 +728,16 @@ Consultar estos archivos según el tipo de cambio:
 - `autonomous-adrs.md` para generar documentación arquitectónica (ADR) de manera autónoma.
 - `contextual-memory.md` para usar `.nexus-memory.md` y aprender de las correcciones del proyecto.
 - `devsecops-gate.md` para forzar chequeos de IDOR, N+1 y complejidad algorítmica antes de entregar código.
+- `zero-waste-protocol.md` **[CRÍTICO]** para optimizar el consumo de tokens limitando la lectura de logs y uso de grep.
+- `memory-offloading.md` **[CRÍTICO]** para archivar el estado de sesiones largas en `.nexus-state.md`.
 
 ### 🚀 [CORE: AUTONOMÍA ÉLITE (SRE, SecOps & Context)]
-**1. Contextual Memory:** Al iniciar cualquier interacción, Antigravity DEBE revisar si existe `.nexus-memory.md` y acatar sus reglas personalizadas. Si el usuario corrige un patrón, el agente debe actualizar la memoria.
-**2. Blast Radius Analysis:** Antes de modificar clases core o funciones compartidas, DEBE usar `grep_search` para evaluar qué otros módulos se romperán y arreglarlos en la misma tarea.
-**3. Autonomous ADRs:** Al introducir un patrón, módulo grande o librería, DEBE generar un ADR (Architecture Decision Record) en `docs/architecture/decisions/`.
-**4. Self-Healing Tests:** Al arreglar un bug, intentar crear un test que lo reproduzca, demostrar que falla, aplicar el parche y asegurar que pasa.
-**5. DevSecOps Gate:** Barrera invisible. Todo código entregado pasa primero por un escaneo mental de vulnerabilidades (IDOR, Mass Assignment, N+1, Big O) y se auto-optimiza.
+**1. Zero-Waste Context Protocol:** Antigravity tiene prohibido hacer volcados completos de archivos grandes (>150 líneas) o logs de consola crudos. DEBE usar `grep`, `tail` y herramientas de lectura parcial para encontrar firmas exactas y evitar el agotamiento de tokens. Prohibido el *Conversational Echo* (repetir lo que dijo el usuario).
+**2. Contextual Memory:** Al iniciar cualquier interacción, Antigravity DEBE revisar si existe `.nexus-memory.md` o `.nexus-state.md` y acatar sus reglas personalizadas. Si el usuario pide `/nexus-save` o la sesión se vuelve muy larga, el agente debe activar el **Memory Offloading Protocol**.
+**3. Blast Radius Analysis:** Antes de modificar clases core o funciones compartidas, DEBE usar `grep_search` para evaluar qué otros módulos se romperán y arreglarlos en la misma tarea.
+**4. Autonomous ADRs:** Al introducir un patrón, módulo grande o librería, DEBE generar un ADR (Architecture Decision Record) en `docs/architecture/decisions/`.
+**5. Self-Healing Tests:** Al arreglar un bug, intentar crear un test que lo reproduzca, demostrar que falla, aplicar el parche y asegurar que pasa.
+**6. DevSecOps Gate:** Barrera invisible. Todo código entregado pasa primero por un escaneo mental de vulnerabilidades (IDOR, Mass Assignment, N+1, Big O) y se auto-optimiza.
 
 ### 🩺 [CORE: BUG RESOLUTION ENGINE (BRE) — INCIDENT RESPONSE & DIAGNOSTICS]
 
