@@ -25,6 +25,8 @@ backend:
   version: "11"                 # framework major version
   language: "php"               # php | typescript | python | javascript
   php_version: "8.3"            # only for Laravel projects
+  paradigm: "rest"              # rest | graphql | monolithic-ssr | microservices
+  architecture_style: "mvc"     # mvc | hexagonal | clean-architecture | ddd
 
   auth:
     driver: "sanctum"           # sanctum | jwt | passport | auth0 | firebase | none
@@ -34,6 +36,8 @@ backend:
     primary: "postgresql"       # postgresql | mysql | sqlite | mongodb | none
     version: "16"
     orm: "eloquent"             # eloquent | prisma | drizzle | typeorm | sequelize | raw
+    topology: "single"          # single | read-replica | distributed | db-per-tenant | schema-per-tenant
+    isolation_level: "repeatable-read" # repeatable-read | read-committed | serializable
 
   cache:
     driver: "redis"             # redis | memcached | database | array | none
@@ -54,6 +58,7 @@ frontend:
   version: "18"
   language: "typescript"        # typescript | javascript
   bundler: "vite"               # vite | nextjs | webpack | remix | none
+  architecture: "modular-by-feature" # modular-by-feature | layers | atomic | clean-architecture
 
   state:
     server: "swr"               # swr | react-query | none

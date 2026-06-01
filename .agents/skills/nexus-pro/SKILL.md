@@ -168,12 +168,16 @@ triggers:
 | NEXUS_CONFIG value | Adaptation |
 |--------------------|-----------|
 | `backend.framework: nestjs` | Generate NestJS modules/controllers/services/guards instead of Laravel |
-| `backend.database.primary: mysql` | Use MySQL syntax (no UUID default, use BIGINT, adapt migrations) |
+| `backend.database.primary: mysql` | Load `references/database-mysql.md` (Use MySQL syntax, BIGINT PKs, check InnoDB limits) |
+| `backend.database.primary: postgresql` | Load `references/database-postgresql.md` (Use native UUIDs, GIN index for JSONB, concurrent migrations) |
+| `backend.paradigm: rest` | Load `references/backend-api-rest.md` (Use strict DTOs, versioning, idempotency keys, and resources) |
+| `backend.architecture_style: hexagonal` | Apply Ports & Adapters pattern separating Domain, Application, and Infrastructure layers |
 | `backend.auth.driver: jwt` | Use JWT middleware patterns instead of Sanctum `auth:sanctum` |
 | `backend.orm: typeorm` | Generate TypeORM entities/repositories instead of Eloquent models |
 | `frontend.framework: vue` | Generate Vue 3 Composition API instead of React hooks |
 | `frontend.state.client: pinia` | Use Pinia stores instead of Zustand |
 | `frontend.state.server: vue-query` | Use Vue Query instead of SWR |
+| `frontend.architecture: clean-architecture` | Load `references/frontend-agnostic.md` to implement agnostic Clean Frontend structure |
 | `project.tenant_key: org_id` | Use `org_id` everywhere instead of `company_id` |
 | `project.multi_tenant: false` | Skip tenant isolation rules — single-tenant project |
 | `features.offline_sync: true` | Apply IndexedDB + SyncOrchestrator patterns |
@@ -562,9 +566,13 @@ Antes de implementar, Antigravity debe consultar los documentos dentro de `refer
 
 - `architecture.md` para estructura general.
 - `backend.md` para Laravel, services, repositories, requests, policies y jobs.
+- `backend-api-rest.md` para patrones avanzados de diseño de APIs REST y versionamiento.
 - `frontend.md` para React, hooks, modales, SWR/react-query y UI modular.
+- `frontend-agnostic.md` para patrones de interfaz modular y arquitectura limpia en frontend.
 - `security.md` para revisión de vulnerabilidades.
-- `database.md` para PostgreSQL, índices, queries y auditoría.
+- `database.md` para directrices generales de base de datos.
+- `database-postgresql.md` para PostgreSQL, índices GIN, particionado y RLS.
+- `database-mysql.md` para MySQL, optimización de InnoDB y Online DDL.
 - `performance.md` para optimización.
 - `testing.md` para pruebas.
 - `cicd.md` para pipeline y despliegue.
