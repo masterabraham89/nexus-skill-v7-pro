@@ -9,10 +9,11 @@
 **The most complete enterprise engineering skill for Antigravity.**  
 Clean Architecture · Security by Default · Production-Ready Code.
 
-[![Version](https://img.shields.io/badge/version-7.0--pro--enterprise-blue?style=for-the-badge)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-7.3--mobile--ux-blue?style=for-the-badge)](./CHANGELOG.md)
 [![Platform](https://img.shields.io/badge/platform-Antigravity-purple?style=for-the-badge)](#)
 [![Category](https://img.shields.io/badge/category-Enterprise%20Engineering-orange?style=for-the-badge)](#)
 [![Stack](https://img.shields.io/badge/stack-Laravel%20%7C%20React%20%7C%20PostgreSQL-green?style=for-the-badge)](#)
+[![Mobile](https://img.shields.io/badge/mobile-Flutter--Style%20UX-cyan?style=for-the-badge)](#)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey?style=for-the-badge)](./LICENSE)
 
 🌐 [Leer en Español](./README.es.md)
@@ -40,6 +41,7 @@ Instead of generating generic code, with NEXUS-PRO Antigravity produces code tha
 ✅ Applications with **roles, permissions, and financial audit trails**  
 ✅ **REST APIs** with a modular React/TypeScript frontend  
 ✅ **PWA or Capacitor** apps requiring mobile performance  
+✅ Projects that need **Flutter-quality mobile UX** built with React/Web technologies  
 ✅ Any project that demands **clean architecture and maintainable code**
 
 ---
@@ -67,6 +69,7 @@ nexus-skill-v7-pro-enterprise/
 | **Architecture** | architecture, ddd-lite, decision-trees, api-standards |
 | **Laravel Backend** | backend, security, database, migration-safety, queue-reliability |
 | **React Frontend** | frontend, design-system, mobile-pwa, ux-failure-states |
+| **📱 Mobile UX (NEW)** | **mobile-ux-patterns** · App Shell · POS · E-commerce · Dashboards · Wizards · Thumb Zones · Safe Areas |
 | **Security** | security, tenant-isolation, data-privacy, data-classification, anti-hallucination |
 | **Operations** | cicd, monitoring, observability-engineering, disaster-recovery, infrastructure |
 | **Governance** | execution-policies, scope-control, audit-trail, definition-of-done, feature-flags |
@@ -201,6 +204,8 @@ Once installed, type any of these triggers in Antigravity and the skill activate
 "audit code"
 "create Laravel service"
 "review multi-tenant isolation"
+"design mobile view"          ← NEW: Flutter-Style App Shell
+"apply app shell"              ← NEW: Mobile UX Architecture
 ```
 
 **Spanish triggers:**
@@ -209,6 +214,9 @@ Once installed, type any of these triggers in Antigravity and the skill activate
 "crear módulo React"    "revisar seguridad"
 "optimizar performance" "debug API"
 "preparar despliegue"   "auditar código"
+"diseñar vista móvil"  ← NUEVO: Aplica Mobile UX estilo Flutter
+"aplicar app shell"    ← NUEVO: Arquitectura Scaffold Web
+"mejorar ux móvil"     ← NUEVO: Patrones Ergonómicos
 ```
 
 Or invoke it explicitly:
@@ -242,7 +250,7 @@ I need to create an endpoint for [your task].
 | **Auth** | Laravel Sanctum |
 | **Cache / Queue** | Redis |
 | **Deploy** | Any server or cloud platform |
-| **Mobile** | Capacitor / PWA |
+| **Mobile UX** | Capacitor / PWA / **Flutter-Style App Shell (React)** |
 
 ---
 
@@ -296,6 +304,7 @@ I need to create an endpoint for [your task].
 
 | Version | Highlights |
 |---------|-----------|
+| **v7.3-mobile-ux** | 🆕 Flutter-Style Mobile UX Engine · App Shell (Scaffold Web) · Platform Archetypes (POS, E-commerce, Admin, Forms) · Thumb Zones · Bottom Sheets · Safe Areas · Native-quality PWA UI |
 | **v7.2-bug-resolution-engine** | Autonomous Bug Resolution Engine (BRE) · 5-Phase Triage & Root Cause Analysis (5 Whys) · Test-Driven Repair · P1-P4 Severity Protocols · SRE Mode |
 | **v7.1-diagnostics-sre** | Visual Debugging · RCA Protocol · Intelligent Log Analysis |
 | **v7.0-pro-enterprise** | God Mode Debugging · Anti-Patch Policy · Plan Before Code · Tenant Isolation Testing · Feature Flags · Idempotency · Export Safety · Definition of Done · Bilingual support |
@@ -369,8 +378,9 @@ Platform: [Antigravity](https://antigravity.dev)
 
 <div align="center">
 
-**NEXUS-PRO** · v7.0-pro-enterprise · Enterprise Engineering Skill for Antigravity
+**NEXUS-PRO** · v7.3-mobile-ux · Enterprise Engineering Skill for Antigravity
 
-*Build as if every change goes to real production, with real users, real data, and future maintainability.*
+*Build as if every change goes to real production, with real users, real data, and future maintainability.*  
+*Design every mobile view as if it were a Flutter app — ergonomic, structured, and native-quality.*
 
 </div>

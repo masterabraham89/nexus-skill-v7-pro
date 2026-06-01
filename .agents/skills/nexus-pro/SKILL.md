@@ -80,6 +80,9 @@ triggers:
   - "actualizar memoria de proyecto"
   - "optimizar tokens"
   - "/nexus-save"
+  - "diseñar vista móvil"
+  - "aplicar app shell"
+  - "mejorar ux móvil"
   # — BRE (Bug Resolution Engine) — Español —
   - "hay un bug"
   - "hay un error"
@@ -730,6 +733,7 @@ Consultar estos archivos según el tipo de cambio:
 - `devsecops-gate.md` para forzar chequeos de IDOR, N+1 y complejidad algorítmica antes de entregar código.
 - `zero-waste-protocol.md` **[CRÍTICO]** para optimizar el consumo de tokens limitando la lectura de logs y uso de grep.
 - `memory-offloading.md` **[CRÍTICO]** para archivar el estado de sesiones largas en `.nexus-state.md`.
+- `mobile-ux-patterns.md` **[CRÍTICO PARA FRONTEND]** para aplicar arquitectura UI móvil estilo Flutter (App Shells, Bottom Sheets, Ergonomía).
 
 ### 🚀 [CORE: AUTONOMÍA ÉLITE (SRE, SecOps & Context)]
 **1. Zero-Waste Context Protocol:** Antigravity tiene prohibido hacer volcados completos de archivos grandes (>150 líneas) o logs de consola crudos. DEBE usar `grep`, `tail` y herramientas de lectura parcial para encontrar firmas exactas y evitar el agotamiento de tokens. Prohibido el *Conversational Echo* (repetir lo que dijo el usuario).

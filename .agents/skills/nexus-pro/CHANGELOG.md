@@ -1,5 +1,23 @@
 # Changelog — NEXUS-PRO (nexus-skill-v7-pro-enterprise)
 
+## 7.3-mobile-ux (Flutter-Style Native Mobile UX Engine)
+
+La IA ahora construye interfaces móviles con calidad de aplicación nativa, aplicando la misma filosofía arquitectónica que Flutter (Scaffold, App Shell, Bottom Sheets, Thumb Zones) pero sobre tecnologías web (React, Tailwind CSS, PWA).
+
+- **`mobile-ux-patterns.md` (NUEVA REFERENCIA CRÍTICA):** Cerebro de diseño móvil que le enseña al agente la anatomía correcta de cada tipo de aplicación para pantallas táctiles.
+- **App Shell Container (Scaffold Web):** El agente siempre envolverá las vistas en un contenedor restringido (`max-w-md`, `h-[100dvh]`, `flex flex-col`) para evitar que la interfaz se estire grotescamente en pantallas grandes y se vea perfecta en móvil.
+- **Arquetipos de UI por Plataforma:** El agente detecta el tipo de aplicación y aplica el patrón correcto automáticamente:
+  - **POS / Catálogos Digitales:** Categorías superiores deslizables, grilla de productos compacta (`grid-cols-2`), carrito en Bottom Sheet inferior.
+  - **E-commerce:** Carruseles táctiles con snap, barra inferior fija con total y botón de pagar.
+  - **Paneles Administrativos:** Bottom Navigation Bar (prohibido Sidebar en móvil), tablas convertidas en tarjetas, filtros en Bottom Sheet.
+  - **Formularios / Landing Pages:** Wizards paso a paso, botón de acción fijo al fondo de la pantalla (`mt-auto` o `fixed bottom-0`).
+- **Ergonomía y Touch Targets:** Ningún elemento interactivo puede tener menos de `44px × 44px`. El agente aplica las "zonas calientes" del pulgar (Thumb Zone), colocando siempre las acciones principales abajo.
+- **Bottom Sheets > Modales:** Prohibidos los modales centrados flotantes en vista móvil. Todo diálogo surge desde abajo.
+- **Safe Areas:** Uso correcto de `env(safe-area-inset-bottom/top)` para no solapar controles con la barra gestual del iPhone o el notch de Android.
+- **Micro-interacciones:** Estado `active:scale-95` en botones para feedback visual inmediato (equivalente al Ripple de Material Design en Flutter).
+- **Nuevos Triggers:** El skill ahora se activa automáticamente con: `"diseñar vista móvil"`, `"aplicar app shell"`, `"mejorar ux móvil"`.
+- **Nuevo Social Preview:** Banner promocional actualizado con el nuevo posicionamiento de Mobile UX nativo.
+
 ## 7.2-bug-resolution-engine (Motor Autónomo de Resolución SRE)
 
 Conversión de la IA de un simple "reportador de bugs" a un **Ingeniero SRE Autónomo**:

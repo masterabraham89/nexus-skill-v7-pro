@@ -7,10 +7,11 @@
 **El skill de ingeniería enterprise para Antigravity más completo del ecosistema.**  
 Arquitectura limpia · Seguridad por defecto · Preparado para producción real.
 
-[![Version](https://img.shields.io/badge/version-7.0--pro--enterprise-blue?style=for-the-badge)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-7.3--mobile--ux-blue?style=for-the-badge)](./CHANGELOG.md)
 [![Platform](https://img.shields.io/badge/platform-Antigravity-purple?style=for-the-badge)](#)
 [![Category](https://img.shields.io/badge/category-Enterprise%20Engineering-orange?style=for-the-badge)](#)
 [![Stack](https://img.shields.io/badge/stack-Laravel%20%7C%20React%20%7C%20PostgreSQL-green?style=for-the-badge)](#)
+[![Mobile](https://img.shields.io/badge/mobile-Flutter--Style%20UX-cyan?style=for-the-badge)](#)
 
 </div>
 
@@ -35,6 +36,7 @@ En lugar de generar código genérico, con NEXUS-PRO Antigravity produce código
 ✅ Aplicaciones con **roles, permisos y auditoría financiera**  
 ✅ APIs REST con **frontend React/TypeScript modular**  
 ✅ Apps **PWA o Capacitor** que requieren rendimiento móvil  
+✅ Proyectos que necesiten **UX móvil de calidad Flutter** construido con React/Web  
 ✅ Cualquier proyecto que necesite **arquitectura limpia y código mantenible**
 
 ---
@@ -59,6 +61,7 @@ nexus-skill-v7-pro-enterprise/
 | **Arquitectura** | architecture, ddd-lite, decision-trees, api-standards |
 | **Backend Laravel** | backend, security, database, migration-safety, queue-reliability |
 | **Frontend React** | frontend, design-system, mobile-pwa, ux-failure-states |
+| **📱 Mobile UX (NUEVO)** | **mobile-ux-patterns** · App Shell · POS · E-commerce · Dashboards · Wizards · Thumb Zones · Safe Areas |
 | **Seguridad** | security, tenant-isolation, data-privacy, data-classification, anti-hallucination |
 | **Operaciones** | cicd, monitoring, observability-engineering, disaster-recovery, infrastructure |
 | **Gobierno** | execution-policies, scope-control, audit-trail, definition-of-done, feature-flags |
@@ -130,6 +133,9 @@ Una vez instalado, escribe en Antigravity cualquiera de estos triggers y el skil
 "debug API"
 "preparar despliegue"
 "auditar código"
+"diseñar vista móvil"   ← NUEVO: Activa Mobile UX estilo Flutter
+"aplicar app shell"     ← NUEVO: Estructura Scaffold Web
+"mejorar ux móvil"      ← NUEVO: Patrones Ergónomicos
 ```
 
 O puedes invocarlo explícitamente:
@@ -163,7 +169,7 @@ Necesito crear un endpoint para [tu tarea].
 | **Auth** | Laravel Sanctum |
 | **Cache / Queue** | Redis |
 | **Deploy** | Cualquier servidor o plataforma cloud |
-| **Mobile** | Capacitor / PWA |
+| **Mobile UX** | Capacitor / PWA / **Flutter-Style App Shell (React)** |
 
 ---
 
@@ -214,6 +220,7 @@ Necesito crear un endpoint para [tu tarea].
 
 | Versión | Highlights |
 |---------|-----------|
+| **v7.3-mobile-ux** | 🆕 Motor de UX Móvil Estilo Flutter · App Shell (Scaffold Web) · Arquetipos por Plataforma (POS, E-commerce, Admin, Formularios) · Thumb Zones · Bottom Sheets · Safe Areas · UI móvil de calidad nativa |
 | **v7.2-bug-resolution-engine** | Motor Autónomo de Resolución de Bugs (BRE) · Triage en 5 Fases & Root Cause Analysis (5 Porqués) · Test-Driven Repair · Protocolos de Severidad P1-P4 · Modo SRE |
 | **v7.1-diagnostics-sre** | Debugging Visual · Protocolo RCA · Análisis Inteligente de Logs |
 | **v7.0-pro-enterprise** | God Mode Debugging, Anti-Patch Policy, Plan Before Code, Tenant Isolation, Feature Flags, Idempotency, Export Safety, Definition of Done |
@@ -246,8 +253,9 @@ Plataforma: [Antigravity](https://antigravity.dev)
 
 <div align="center">
 
-**NEXUS-PRO** · v7.0-pro-enterprise · Enterprise Software Engineering Skill for Antigravity
+**NEXUS-PRO** · v7.3-mobile-ux · Enterprise Software Engineering Skill for Antigravity
 
-*Construye como si cada cambio fuera a producción real, con usuarios reales, datos reales y mantenimiento futuro.*
+*Construye como si cada cambio fuera a producción real, con usuarios reales, datos reales y mantenimiento futuro.*  
+*Diseña cada vista móvil como si fuera una app Flutter: ergónomica, estructurada y de calidad nativa.*
 
 </div>
